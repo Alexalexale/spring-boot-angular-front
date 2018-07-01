@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-    baseUrl: "https://pure-depths-55062.herokuapp.com",
+    baseUrl: "https://github.com/Alexalexale/spring-boot-angular-front.git",
 }
