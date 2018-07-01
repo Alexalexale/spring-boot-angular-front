@@ -38,7 +38,7 @@ export class FormularioComponent implements OnInit {
     this.clienteService.insert(this.cliente).subscribe(response => {
 
     }, error => {
-      console.log(error);
+      console.log(error.error);
     });
   }
 

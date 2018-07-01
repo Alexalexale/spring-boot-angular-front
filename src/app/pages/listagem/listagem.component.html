@@ -1,3 +1,18 @@
-<p>
-  listagem works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Limite de Credito</th>
+      <th>Risco</th>
+      <th>Taxa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.nome }}</td>
+      <td>{{ cliente.limiteCredito | currency }}</td>
+      <td>{{ cliente.risco }}</td>
+      <td>{{ cliente.taxa }} %</td>
+    </tr>
+  </tbody>
+</table>

@@ -20,4 +20,8 @@ export class ClienteService {
         );
     }
 
+    findAll() {
+        return this.http.get<ClienteDTO[]>(`${API_CONFIG.baseUrl}/clientes`);
+    }
+
 }
