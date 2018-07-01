@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup">
 
-  <div *ngIf="msgErro" style="float: right;width: 300px;position: fixed;right: 0;top: 0;">
+  <div *ngIf="msgErro" style="float: right;width: 300px;position: fixed;right: 0;top: 53px;">
     <div *ngFor="let erro of messages" class="alert alert-warning" role="alert">
       <strong>{{ erro.fieldName }}:</strong> {{ erro.message }}
     </div>
