@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ListagemComponent } from './pages/listagem/listagem.component';
+import { ClienteService } from '../services/cliente.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,13 @@ import { ListagemComponent } from './pages/listagem/listagem.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ClienteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

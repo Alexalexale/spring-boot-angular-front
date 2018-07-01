@@ -1,3 +1,23 @@
-<p>
-  formulario works!
-</p>
+<form [formGroup]="formGroup">
+
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input formControlName="nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+  </div>
+
+  <div class="form-group">
+    <label for="limiteCredito">Limite de Credito</label>
+    <input formControlName="limiteCredito" type="number" class="form-control" name="limiteCredito" id="limiteCredito" placeholder="Limite de Credito">
+  </div>
+
+  <div class="form-group">
+    <label for="risco">Risco</label>
+    <select class="form-control" id="risco" name="risco" formControlName="risco">
+      <option value="">Selecione o risco</option>
+      <option *ngFor="let risco of riscos" [value]="risco">{{risco}}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="insert()">Salvar</button>
+
+</form>
